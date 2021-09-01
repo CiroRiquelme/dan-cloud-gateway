@@ -42,7 +42,13 @@ spring:
             - Path=/cuenta/**
           filters:
             - StripPrefix=1
-            
+        - id: blog
+          uri: lb://blog
+          predicates:
+            - Path=/blog/**
+          filters:
+            - StripPrefix=1
+               
 
   
 eureka:
